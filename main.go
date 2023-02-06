@@ -13,10 +13,12 @@ func main() {
 	payload := []byte("Heyya, values still does not match")
 	filereader.Hash_And_BroadCast(filereader.NewHashReader(payload))
 
+
+	//Interfaces Demo Implementation
 	solve_quadratic := filereader.Roots{A: 2.2, B: 3.3, C: 4.4}
 	quadratic_results := solve_quadratic.Roots_Determinant()
 	roots_status := filereader.Roots_Checker(quadratic_results)
-	//cannot use quadratic results (variable of type float 64) in argument
+	fmt.Println(quadratic_results)
 	fmt.Println(roots_status)
 
 }
